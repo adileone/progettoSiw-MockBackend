@@ -3,7 +3,7 @@ package it.uniroma3.siw.mockBackend;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import org.bson.Document;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -73,8 +73,17 @@ public class ApiRestController {
 		return primitiveNames;
 	}
 	
+	@RequestMapping(value="/createPipeline", method = RequestMethod.POST)
+	@ResponseBody
+	private Document createPipeline(@RequestParam String doc) {
+		
+		
+		System.out.println(doc);	
 	
+		Document res = new Document().append("message", "pipeline received");
 	
-
+		return res;
+		
+	}
 
 }
