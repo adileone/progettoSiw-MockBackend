@@ -73,7 +73,7 @@ public class ApiRestController {
 		return primitiveNames;
 	}
 	
-	@RequestMapping(value="/createPipeline", method = RequestMethod.POST)
+	@RequestMapping(value="/getPipeline", method = RequestMethod.POST)
 	@ResponseBody
 	private Document createPipeline(@RequestParam String doc) {
 		
