@@ -80,7 +80,7 @@ public class ApiRestController {
 		
 		System.out.println(doc);	
 	
-		Document res = new Document().append("message", "pipeline received");
+		Document res = new Document().append("message", "pipeline submitted");
 	
 		return res;
 		
